@@ -41,7 +41,7 @@ const CreateJob = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('/api/jobs', formData);
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/jobs`, formData);
       console.log('Job created:', response.data);
       setShowModal(true);
       
