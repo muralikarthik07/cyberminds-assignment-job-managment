@@ -26,6 +26,7 @@ const JobList = () => {
     try {
       setLoading(true);
       const response = await axios.get('/api/jobs');
+      console.log('🟡 API response:', response.data);
       setJobs(response.data);
       setFilteredJobs(response.data);
     } catch (error) {
